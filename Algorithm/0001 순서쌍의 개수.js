@@ -10,7 +10,6 @@
 // 20	6
 // 100	9
 
-// 입출력 예 설명
 // 입출력 예 #1
 // n이 20 이므로 곱이 20인 순서쌍은 (1, 20), (2, 10), (4, 5), (5, 4), (10, 2), (20, 1) 이므로 6을 return합니다.
 
@@ -19,17 +18,15 @@
 
 // 처음 접근
 function solution(n) {
-  let answer = 0;
   let couple = [];
   for (let i = 1; i <= n; i++) {
     if (n % i === 0) {
       console.log(n, i, n / i);
       couple.push([i, n / i]);
-      answer++;
     }
   }
   console.log(couple, couple.length);
-  return answer;
+  return couple.length;
 }
 
 // 풀어보니 couple라는 빈 배열이 필요가 없음
